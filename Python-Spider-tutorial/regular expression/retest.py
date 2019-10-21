@@ -1,8 +1,19 @@
 # 导入re模块
 import re
 
-# 使用match方法进行匹配操作
-result = re.match(正则表达式, 要匹配的字符串)
+print("正则表达式\d操作")
+# 数字[0-9]
+ret = re.match("嫦娥\d号", "嫦娥3号发射失败")
+print(ret.group())
 
-# 如果上一步匹配到数据的话，可以使用group方法来提取数据
-result.group()
+print("正则表达式\D操作")
+# 匹配非数字[^0-9]
+match_obj = re.match("\D", "。")
+if match_obj:
+    print(match_obj.group())
+else:
+    print("匹配失败")
+
+# \s 空白字符:[<空格>\t\r\n\f\v]
+match_obj = re.match("hello\sworl")
+

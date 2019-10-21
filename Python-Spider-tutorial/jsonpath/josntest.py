@@ -13,6 +13,7 @@ json_string = '''
     }
 }
 '''
+print('json字符串 转 Python数据类型')
 print("json_string数据类型：",type(json_string))
 data = json.loads(json_string)
 print("data数据类型：",type(data))
@@ -28,6 +29,7 @@ data = {
         "father": "妈妈"
     }
 }
+print('Python 类型数据 转json字符串')
 print("data数据类型", type(data))
 json_string2 = json.dumps(data)
 print("json_strong数据类型:", type(json_string2))
@@ -52,5 +54,3 @@ data = {
 }
 with open('data_out.json','w',encoding='utf-8') as f:
     json.dump(data,f,ensure_ascii=False,indent=2)
-
-
