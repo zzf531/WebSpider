@@ -9,7 +9,6 @@ headers = {
 # 定义 代理服务器
 proxies = {
     'http': '140.143.156.166:1080'
-
 }
 # 使用 POST 请求参数发送请求
 response = requests.get(url,headers=headers,proxies=proxies)
