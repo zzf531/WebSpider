@@ -1,4 +1,4 @@
-import requests
+import requests_入门
 
 url = 'http://www.baidu.com'
 
@@ -12,6 +12,6 @@ cookies = {
 }
 
 # 使用 POST请求参数
-response = requests.get(url, headers=headers, cookies=cookies)
+response = requests_入门.get(url, headers=headers, cookies=cookies)
 print(len(response.text))
 

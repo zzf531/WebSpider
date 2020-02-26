@@ -1,7 +1,7 @@
 from time import time
 from threading import Thread
 
-import requests
+import requests_入门
 
 
 # 继承Thread类创建自定义的线程类
@@ -13,7 +13,7 @@ class DownloadHanlder(Thread):
 
     def run(self):
         filename = self.url[self.url.rfind('/') + 1:]
-        resp = requests.get(self.url)
+        resp = requests_入门.get(self.url)
         with open('/' + filename, 'wb') as f:
             f.write(resp.content)
 
@@ -23,7 +23,7 @@ def main():
     # 下面的代码中使用了天行数据接口提供的网络API
     # 要使用该数据接口需要在天行数据的网站上注册
     # 然后用自己的Key替换掉下面代码的中APIKey即可
-    resp = requests.get(
+    resp = requests_入门.get(
         'http://api.tianapi.com/meinv/?key=d98cb8d8c6f5ab4ee4705f18f8f889aa&num=10')
     # 将服务器返回的JSON格式的数据解析为字典
     data_model = resp.json()

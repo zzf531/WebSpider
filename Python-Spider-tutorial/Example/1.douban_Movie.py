@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import requests
+import requests_入门
 import json
 
 # 定义请求url
@@ -17,7 +17,7 @@ for page_start in range(0, 100, 20):
         "page_limit": "20",
         "page_start": page_start
     }
-    response = requests.get(
+    response = requests_入门.get(
         url=url,
         headers=headers,
         params=params

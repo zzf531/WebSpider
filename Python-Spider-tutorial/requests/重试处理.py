@@ -1,5 +1,5 @@
 # _*_ coding: utf-8 _*_
-import requests
+import requests_入门
 from retrying import retry
 
 # 2. 使用装饰器进行重试设置
@@ -13,7 +13,7 @@ def parse_url(url):
     proxies = {
         'http':'124.235.135.210:80'
     }
-    response = requests.get(url, headers=headers, proxies=proxies, timeout=5)
+    response = requests_入门.get(url, headers=headers, proxies=proxies, timeout=5)
     return response.text
 
 if __name__ == '__main__':

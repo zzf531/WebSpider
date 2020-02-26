@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import requests
+import requests_入门
 
 class TiebaSpider():
 
@@ -36,7 +36,7 @@ class TiebaSpider():
         :param url:
         :return:
         '''
-        response = requests.get(
+        response = requests_入门.get(
             url=url,
             headers = self.headers
         )

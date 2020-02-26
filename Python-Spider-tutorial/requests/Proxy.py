@@ -1,5 +1,5 @@
 # 导入模块
-import requests
+import requests_入门
 # 定义请求地址
 url = 'http://www.baidu.com'
 # 定义自定义请求头
@@ -11,7 +11,7 @@ proxies = {
     'http': '140.143.156.166:1080'
 }
 # 使用 POST 请求参数发送请求
-response = requests.get(url,headers=headers,proxies=proxies)
+response = requests_入门.get(url, headers=headers, proxies=proxies)
 # 获取响应的 html 内容
 html = response.text
 print(len(html))

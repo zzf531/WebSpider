@@ -1,7 +1,7 @@
 import requests
 url = "http://m.ip138.com/ip.asp?"
 ip = "125.220.159.160"
-kv = {"ip":ip}
+kv = {"ip": ip}
 
 try:
     r = requests.get(url, params = kv)

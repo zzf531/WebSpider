@@ -2,7 +2,7 @@ import re
 import argparse
 import time
 import json
-import requests
+import requests_入门
 import pymongo
 
 def get_answers_by_page(page_no):
@@ -11,7 +11,7 @@ def get_answers_by_page(page_no):
     headers = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
     }
-    r = requests.get(url, verify=False, headers=headers)
+    r = requests_入门.get(url, verify=False, headers=headers)
     content = r.content.decode("utf-8")
     data = json.loads(content)
     is_end = data["paging"]["is_end"]
